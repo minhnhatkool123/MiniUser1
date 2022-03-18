@@ -24,7 +24,7 @@ module.exports = {
 		countLoginLogout: {
 			rest: {
 				method: "GET",
-				fullPath: "/v1/External/MiniProgram/CountLoginLogout/:month",
+				fullPath: "/v1/External/CountLoginLogout/:month",
 				auth: false,
 			},
 			handler: require("./actions/countLoginLogout.action"),
@@ -32,7 +32,7 @@ module.exports = {
 		logout: {
 			rest: {
 				method: "POST",
-				fullPath: "/v1/External/MiniProgram/Logout",
+				fullPath: "/v1/External/Logout",
 				auth: {
 					strategies: ["Default"],
 					mode: "required", // 'required', 'optional', 'try'
@@ -50,7 +50,7 @@ module.exports = {
 		resetPassword: {
 			rest: {
 				method: "POST",
-				fullPath: "/v1/External/MiniProgram/ResetPassword",
+				fullPath: "/v1/External/ResetPassword",
 				auth: false,
 			},
 			params: {
@@ -65,7 +65,7 @@ module.exports = {
 		sendOtpEmail: {
 			rest: {
 				method: "POST",
-				fullPath: "/v1/External/MiniProgram/SendOtpEmail",
+				fullPath: "/v1/External/SendOtpEmail",
 				auth: false,
 			},
 			params: {
@@ -79,7 +79,7 @@ module.exports = {
 		login: {
 			rest: {
 				method: "POST",
-				fullPath: "/v1/External/MiniProgram/Login",
+				fullPath: "/v1/External/Login",
 				auth: false,
 				security: true,
 			},
@@ -95,7 +95,7 @@ module.exports = {
 		createAccount: {
 			rest: {
 				method: "POST",
-				fullPath: "/v1/External/MiniProgram/CreateAccount",
+				fullPath: "/v1/External/CreateAccount",
 				auth: false,
 			},
 			params: {
@@ -128,7 +128,7 @@ module.exports = {
 	/**
 	 * Service created lifecycle event handler
 	 */
-	created() {},
+	created() { },
 
 	/**
 	 * Service started lifecycle event handler
@@ -151,5 +151,5 @@ module.exports = {
 	/**
 	 * Service stopped lifecycle event handler
 	 */
-	async stopped() {},
+	async stopped() { },
 };

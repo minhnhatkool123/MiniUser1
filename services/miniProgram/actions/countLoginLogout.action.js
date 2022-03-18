@@ -48,7 +48,7 @@ module.exports = async function (ctx) {
 					},
 					{
 						$lookup: {
-							from: "Service_MiniProgramUser",
+							from: "User",
 							localField: "_id.userId",
 							foreignField: "id",
 							as: "user_info",
@@ -116,7 +116,7 @@ module.exports = async function (ctx) {
 					},
 					{
 						$lookup: {
-							from: "Service_MiniProgramUser",
+							from: "User",
 							localField: "_id.userId",
 							foreignField: "id",
 							as: "user_info",
